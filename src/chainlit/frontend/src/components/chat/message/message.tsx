@@ -11,6 +11,7 @@ import Author, { authorBoxWidth } from './author';
 import Buttons from './buttons';
 import { settingsState } from 'state/settings';
 import { useRecoilValue } from 'recoil';
+import CircularProgress from '@mui/material/CircularProgress';
 
 interface Props {
   message: INestedMessage;
@@ -81,6 +82,7 @@ const Message = ({
               content={message.content}
               language={message.language}
             />
+            {isRunning && isLast && <CircularProgress color="inherit" size={16} />}
             <DetailsButton
               message={message}
               opened={showDetails}

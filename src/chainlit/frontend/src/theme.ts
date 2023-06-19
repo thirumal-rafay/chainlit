@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const typography = {
-  fontFamily: ['Inter', 'sans-serif'].join(',')
+  fontFamily: ['Roboto', 'sans-serif'].join(',')
 };
 
 const components = {
@@ -54,7 +54,7 @@ const darkTheme = createTheme({
       paper: '#212121'
     },
     primary: {
-      main: '#F80061',
+      main: '#00d0d0',
       dark: '#980039',
       light: '#FFE7EB',
       contrastText: '#fff'
@@ -87,9 +87,9 @@ const lightTheme = createTheme({
       paper: '#FFF'
     },
     primary: {
-      main: '#F80061',
-      dark: '#980039',
-      light: '#FFE7EB',
+      main: '#008080',
+      dark: '#001010',
+      light: '#9DE7E0',
       contrastText: '#fff'
     },
     secondary: {

@@ -100,7 +100,7 @@ const Input = ({ onSubmit, onReply }: Props) => {
       multiline
       variant="standard"
       autoComplete="false"
-      placeholder="Type your message here..."
+      placeholder="Type your query here..."
       disabled={disabled}
       onChange={(e) => setValue(e.target.value)}
       onKeyDown={handleKeyDown}

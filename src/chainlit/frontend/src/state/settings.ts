@@ -20,7 +20,7 @@ export const settingsState = atom<{
   default: {
     open: false,
     expandAll: false,
-    hideCot: false,
+    hideCot: true,
     theme
   }
 });

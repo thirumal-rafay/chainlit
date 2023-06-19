@@ -18,6 +18,7 @@ import GithubButton from 'components/githubButton';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useEffect, useRef, useState } from 'react';
+import RafayLogo from "../assets/rafay-logo.png";
 
 interface INavItem {
   to: string;
@@ -73,7 +74,7 @@ function Nav({ isPublic, hasReadme }: NavProps) {
 
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
-  const tabs = [{ to: '/', label: 'Chat' }];
+  const tabs = [{ to: '/', label: 'Rafay' }];
 
   if (isPublic === false) {
     tabs.push({ to: '/dataset', label: 'History' });
@@ -154,10 +155,11 @@ export default function Header() {
         }}
       >
         <Stack alignItems="center" direction="row">
-          <Nav
+          {/* <Nav
             isPublic={pSettings?.project?.public}
             hasReadme={!!pSettings?.markdown}
-          />
+          /> */}
+          <img src={RafayLogo} />
         </Stack>
         <Stack
           alignItems="center"
@@ -169,7 +171,7 @@ export default function Header() {
           <NewChatButton />
           <Box ml={1} />
           <GithubButton href={pSettings?.ui?.github} />
-          <UserButton />
+          {/* <UserButton /> */}
         </Stack>
       </Toolbar>
     </AppBar>
